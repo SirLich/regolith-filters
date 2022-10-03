@@ -1,1 +1,1 @@
-reticulator==0.1.0b0
+reticulator==0.1.1b0
