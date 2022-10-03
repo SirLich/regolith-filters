@@ -1,0 +1,8 @@
+{
+	"wood": [
+		"minecraft:chest",
+		{
+			"tags": "q.any_tag('wood', 'pumpkin', 'plant')"
+		}
+	]
+}

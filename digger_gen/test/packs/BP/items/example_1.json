@@ -1,0 +1,223 @@
+{
+	"_comment": "This file contains a minecraft:digger component already (skipping)",
+
+
+
+	"format_version": "1.16.100",
+	"minecraft:item": {
+		"description": {
+			"identifier": "digger_test:copper_axe_1",
+			"category": "items"
+		},
+		"components": {
+			"tag:minecraft:is_axe": {},
+			"minecraft:max_stack_size": 1,
+			"minecraft:hand_equipped": true,
+			"minecraft:icon": {
+				"texture": "copper_axe"
+			},
+			"minecraft:durability": {
+				"max_durability": 125,
+				"damage_chance": {
+					"min": 5,
+					"max": 10
+				}
+			},
+			"minecraft:damage": 5,
+			"minecraft:enchantable": {
+				"value": 10,
+				"slot": "axe"
+			},
+			"minecraft:repairable": {
+				"repair_items": [
+					{
+						"items": ["minecraft:iron_ingot", "minecraft:stick"],
+						"repair_amount": "query.max_durability"
+					}
+				]
+			},
+			"minecraft:weapon": {
+				"on_hurt_entity": {
+					"event": "dmg"
+				},
+				"on_not_hurt_entity": {
+					"event": "dmg"
+				},
+				"on_hit_block": {
+					"event": "dmg"
+				}
+			},
+			"minecraft:digger": {
+				"use_efficiency": true,
+				"destroy_speeds": [
+					{
+						"block": {
+							"tags": "q.any_tag('wood', 'pumpkin', 'plant')"
+						},
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:chest",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:bookshelf",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:melon_block",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:warped_stem",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:crimson_stem",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:warped_stem",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:crimson_stem",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:crafting_table",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:crimson_planks",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:warped_planks",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:warped_stairs",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:warped_trapdoor",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:crimson_stairs",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:crimson_trapdoor",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:crimson_door",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:crimson_double_slab",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:warped_door",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:warped_double_slab",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					},
+					{
+						"block": "minecraft:crafting_table",
+						"speed": 10,
+						"on_dig": {
+							"event": "dmg"
+						}
+					}
+				],
+				"on_dig": {
+					"event": "dmg"
+				}
+			}
+		},
+		"events": {
+			"dmg": {
+				"damage": {
+					"type": "none",
+					"amount": 1,
+					"target": "self"
+				}
+			},
+			"on_tool_used": {
+				"damage": {
+					"type": "none",
+					"amount": 1,
+					"target": "self"
+				},
+				"run_command": {
+					"command": [
+						"playsound use.wood @p"
+					]
+				}
+			}
+		}
+	}
+}

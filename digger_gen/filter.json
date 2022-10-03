@@ -1,0 +1,10 @@
+{
+    "description": "Automatically generates `minecraft:digger` based on some meta-data.",
+    "filters": [
+        {
+            "runWith": "python",
+            "script": "./digger_gen.py",
+            "name": "Digger Gen"
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "name": "Digger Gen: Test Project",
+    "author": "SirLich",
+    "packs": {
+        "behaviorPack": "./packs/BP",
+        "resourcePack": "./packs/RP"
+    },
+    "regolith": {
+        "profiles": {
+            "dev": {
+                "filters": [
+                    {
+                        "filter": "local-digger-gen"
+                    }
+                ],
+                "export": {
+                    "target": "local",
+                    "readOnly": false
+                }
+            }
+        },
+        "filterDefinitions": {
+            "local-digger-gen": {
+                "runWith": "python",
+                "script": "../digger_gen.py"
+            }
+        },
+        "dataPath": "./packs/data"
+    }
+}
