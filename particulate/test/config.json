@@ -3,11 +3,11 @@
 	"author": "SirLich",
 	"name": "Particulate Filter test Project",
 	"packs": {
-		"behaviorPack": "./packs/BP",
-		"resourcePack": "./packs/RP"
+		"behaviorPack": "./zresource",
+		"resourcePack": "./zbehavior"
 	},
 	"regolith": {
-		"dataPath": "./packs/data",
+		"dataPath": "./data",
 		"filterDefinitions": {
 			"local-particulate": {
 				"runWith": "python",
