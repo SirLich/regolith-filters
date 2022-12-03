@@ -1,0 +1,42 @@
+{
+	"$schema": "https://raw.githubusercontent.com/Bedrock-OSS/regolith-schemas/main/config/v1.1.json",
+	"author": "SirLich",
+	"name": "Particulate Filter test Project",
+	"packs": {
+		"behaviorPack": "./packs/BP",
+		"resourcePack": "./packs/RP"
+	},
+	"regolith": {
+		"dataPath": "./packs/data",
+		"filterDefinitions": {
+			"local-particulate": {
+				"runWith": "python",
+				"script": "../particulate.py"
+			}
+		},
+		"profiles": {
+			"default": {
+				"export": {
+					"readOnly": true,
+					"target": "development"
+				},
+				"filters": [
+					{
+						"filter": "local-particulate"
+					}
+				]
+			},
+			"preview": {
+				"export": {
+					"readOnly": false,
+					"target": "local"
+				},
+				"filters": [
+					{
+						"filter": "local-particulate"
+					}
+				]
+			}
+		}
+	}
+}

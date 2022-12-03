@@ -1,0 +1,10 @@
+{
+    "description": "Creates particle simulations of entity geometry.",
+    "filters": [
+        {
+            "runWith": "python",
+            "script": "./particulate.py",
+            "name": "Particulate"
+        }
+    ]
+}
