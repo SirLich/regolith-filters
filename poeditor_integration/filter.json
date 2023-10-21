@@ -1,0 +1,9 @@
+{
+    "description": "Synchronizes your .lang project files with poeditor.com",
+    "filters": [
+        {
+            "runWith": "python",
+            "script": "./poeditor.py"
+        }
+    ]
+}
